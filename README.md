@@ -81,3 +81,12 @@ const calculateRiskScore = (customer) => {
 };
 ```
 ![alt text](<Screenshot 2025-04-22 at 2.08.49 AM (2).png>)# kyc-risk-dashboard
+
+
+## 🌐 Hosting Links
+
+- **Frontend (Vercel)**: [https://kyc-risk-dashboard.vercel.app](https://kyc-risk-dashboard.vercel.app)
+- **Backend (Render)**: [https://kyc-risk-dashboard-aru9.onrender.com](https://kyc-risk-dashboard-aru9.onrender.com)
+
+✅ The frontend is built with React + TypeScript using Vite and hosted on Vercel.  
+✅ The backend is a Node.js + Express server deployed via Render and exposes `/customers`, `/customers/:id/status`, and `/alerts` endpoints.
