@@ -13,7 +13,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const fetchCustomers = async () => {
-    const res = await axios.get("http://localhost:5000/customers");
+    const res = await axios.get("https://kyc-risk-dashboard-aru9.onrender.com/customers");
     setCustomers(res.data);
   };
 

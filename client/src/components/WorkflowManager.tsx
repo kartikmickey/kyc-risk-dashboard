@@ -14,7 +14,7 @@ const WorkflowManager = ({ customers, refresh }: { customers: any[]; refresh: ()
   const handleSubmit = async (customerId: string) => {
     const newStatus = formValues[customerId];
     try {
-      await axios.patch(`http://localhost:5000/customers/${customerId}/status`, { status: newStatus });
+      await axios.patch(`https://kyc-risk-dashboard-aru9.onrender.com/customers/${customerId}/status`, { status: newStatus });
       message.success(`Updated status for ${customerId} to ${newStatus}`);
       refresh(); // refresh customer list from backend
     } catch (error) {
