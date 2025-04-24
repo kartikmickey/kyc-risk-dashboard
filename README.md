@@ -80,8 +80,8 @@ const calculateRiskScore = (customer) => {
   );
 };
 ```
-![alt text](<Screenshot 2025-04-22 at 2.08.49 AM (2).png>)# kyc-risk-dashboard
 
+![alt text](<Screenshot 2025-04-22 at 2.08.49 AM (2).png>)# kyc-risk-dashboard
 
 ## 🌐 Hosting Links
 
@@ -90,3 +90,29 @@ const calculateRiskScore = (customer) => {
 
 ✅ The frontend is built with React + TypeScript using Vite and hosted on Vercel.  
 ✅ The backend is a Node.js + Express server deployed via Render and exposes `/customers`, `/customers/:id/status`, and `/alerts` endpoints.
+
+📌 Risk Scoring Logic
+The system calculates a risk score (0 to 100) for each user based on their financial profile.
+The scoring formula includes:
+
+Missed Payments: Each missed loan repayment adds 10 points
+
+Loan-to-Income Ratio: Higher ratios increase risk (multiplied by 20)
+
+Credit Score Deviation: The gap from the ideal credit score (850) adds to the score
+
+//code
+
+<!-- Risk Score = (MissedPayments * 10) + (LoanToIncome * 20) + ((850 - CreditScore) / 10) -->
+
+//code
+
+The final score is capped at 100. Based on the score:
+
+Low Risk: 0–40
+
+Medium Risk: 41–70
+
+High Risk: 71–100
+
+These categories are shown in the dashboard with color-coded labels. (Green , Yellow , red )
